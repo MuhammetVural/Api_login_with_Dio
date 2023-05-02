@@ -6,5 +6,13 @@ class LoginRepository{
   late NetworkManager networkManager;
    final dio = Dio();
    Future<LoginModel?>loginCall({required String email, required String password})async{
-    var response = await dio.post('${networkManager.networkManager.toString()}login');}
+    var response = await dio.post('${networkManager.networkManager.toString()}login');
+    if(response.statusCode == 200){
+      var result = LoginModel.fromJson(response.data);
+      return result;
+    }
+    else{
+      throw ('bir sorun ${response.statusCode}');
+    }
+    }
 }
