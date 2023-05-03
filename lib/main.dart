@@ -1,4 +1,5 @@
 import 'package:api_login_with_dio/features/home/presentation/pages/home_page.dart';
+import 'package:api_login_with_dio/features/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
