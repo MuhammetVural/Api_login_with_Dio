@@ -16,8 +16,9 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     return Scaffold(
       body: Column(children: [
         TextField(controller: ref.read(loginRiverpod).email),
+        const SizedBox(height: 20,),
         TextField(controller: ref.read(loginRiverpod).password,),
-        ElevatedButton(onPressed: (){}, child: Text('Giriş Yap'))
+        ElevatedButton(onPressed: (){}, child: const Text('Giriş Yap'))
       ],),
     );
   }
